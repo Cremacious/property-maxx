@@ -1,6 +1,8 @@
+
+
 const AddPropertyPage = () => {
-    return ( <>
-    </> );
-}
- 
+
+  return <></>;
+};
+
 export default AddPropertyPage;
