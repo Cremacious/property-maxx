@@ -1,7 +1,13 @@
 // import PropertySearchForm from '@/components/PropertySearchForm';
 // import Properties from '@/components/Properties';
+import { connectDB } from '@/config/database';
+import Property from '@/models/Property';
 
 const PropertiesPage = async () => {
+  await connectDB();
+  const properties = await Property.find({}).lean();
+  console.log(properties);
+
   return (
     <>
       <section className="bg-blue-700 py-4">
